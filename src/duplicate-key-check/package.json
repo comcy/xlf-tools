@@ -1,0 +1,47 @@
+{
+  "name": "duplicate-key-check",
+  "version": "1.0.0",
+  "description": "Tool to check xliff files on duplicate keys.",
+  "main": "./index.js",
+  "bin": {
+    "duplic8check": "./index.js"
+  },
+  "scripts": {
+    "build": "rm -rf dist && gulp && npm run clean-package",
+    "build:qa": "npm test && npm run tslint && npm run styles && gulp && npm run clean-package",
+    "clean-package": "node ./buildtools/cleanup-package.js",
+    "dev:js": "npm run build && npm run index:js",
+    "dev:ts": "npm run styles && npm run index:ts",
+    "duplic8check:js": "node ./dist/index.js",
+    "duplic8check:ts": "ts-node ./src/index.ts",
+    "watch": "watch 'npm run build' ./src",
+    "tsc": "tsc",
+    "tsc:watch": "tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "serve ./publish",
+    "tslint": "tslint -p ./tsconfig.json -c ./tslint.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comcy/xlf-tools.git"
+  },
+  "author": "Christian Silfang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/comcy/xlf-tools/issues"
+  },
+  "homepage": "https://github.com/comcy/xlf-tools#readme",
+  "dependencies": {
+    "@types/node": "^18.11.5",
+    "del": "^7.0.0",
+    "fs": "0.0.1-security",
+    "gulp": "^4.0.2",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-tslint": "^8.1.4",
+    "gulp-typescript": "^2.12.2",
+    "ts-node": "^10.9.1",
+    "tslint": "^6.1.3",
+    "typescript": "^4.8.4",
+    "watch": "^1.0.2"
+  }
+}
