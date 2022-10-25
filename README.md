@@ -1,2 +1,2 @@
 # xlf-tools
-Some collection handling *.xlf files
+Some collection of handling *.xlf files
