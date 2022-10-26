@@ -1,0 +1,1 @@
+WriteLine Select-Xml -Path ./samples/some.sample.xlf -XPath '/xliff/file/body/group/transunit' | ForEach-Object { $_.Node.InnerXML }
