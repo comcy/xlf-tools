@@ -5,6 +5,13 @@ var tsProject = ts.createProject("tsconfig.json");
 var sourcemaps = require("gulp-sourcemaps");
 var del = require("del");
 
+// import gulp from "gulp";
+// import tslint from "gulp-stlint";
+// import ts from "gulp-typescript";
+// // import tsProject from ts.createProject('tsconfig.json");
+// import sourcemaps from "sourcemaps";
+// import del from "del";
+
 //-----------------------------------------------------
 
 // Decalrations

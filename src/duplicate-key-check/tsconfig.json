@@ -1,47 +1,14 @@
 {
-  "compileOnSave": true,
+  "extends": "@tsconfig/node14/tsconfig.json",
+
   "compilerOptions": {
-    "rootDir": "src",
-    "strict": true,
     "outDir": "dist",
-    "sourceMap": true,
-    "target": "es5",
-    "module": "commonjs",
+    "module": "esnext",
     "declaration": true,
-    "noImplicitAny": false,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
+    "declarationDir": "dist/dts",
     "moduleResolution": "node",
-    "lib": [
-      "es2015",
-      "dom"
-    ],
-    "baseUrl": "./",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "types": [
-      "node"
-    ],
-    "paths": {
-      "src/*": [
-        "typescript/*"
-      ]
-    }
+    "lib": ["es2020", "dom"]
   },
-  "exclude": [
-    "node_modules",
-    "dist",
-    "build",
-    "scripts",
-    "spec"
-  ],
-  "filesGlob": [
-    "./src/**/*.ts",
-    "./test/**/*.ts",
-    "./typings/index.d.ts",
-    "./custom_typings/**/*.d.ts",
-    "./node_modules/@types/**/*.d.ts"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "lib", "**/*.spec.ts", "**/tests", "**/*.test.ts"]
 }

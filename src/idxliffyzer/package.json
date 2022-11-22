@@ -1,0 +1,37 @@
+{
+  "name": "idffyze",
+  "version": "0.1.0",
+  "description": "ID creating tool for xliff files.",
+  "main": "./dist/index.js",
+  "bin": {
+    "generate-id": "./dist/index.js"
+  },
+  "type": "module",
+  "files": [
+    "dist",
+    "package.json",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "_clear": "rimraf dist/*",
+    "_tsc": "tsc",
+    "_make-bundle": "rollup --config",
+    "build": "npm-run-all _clear _tsc _make-bundle",
+    "generate": "generate-id"
+  },
+  "keywords": [],
+  "author": "Christian Silfang (christian.silfang@gmail.com)",
+  "license": "MIT",
+  "repository": "",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^9.0.2",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "rollup": "^3.4.0",
+    "rollup-plugin-dts": "^5.0.0",
+    "typescript": "^4.9.3",
+    "idffyze": "^0.1.0-alpha.0"
+  }
+}
